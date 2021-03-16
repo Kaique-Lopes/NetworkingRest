@@ -18,11 +18,12 @@ final class NetworkingProvider {
     
     func getUser(id: Int) {
         let url = "\(kBaseUrl)users/\(id)"
-        AF.request(url, method: .get).validate(statusCode: statusOK).responseDecodable(of: UserResponse.self) {
+        AF.request(url, method: .get).validate(statusCode: statusOK).responseDecodable(of: UserResponse.self, decoder: DateDecoder()) {
             response in
             
             if let user = response.value?.data {
                 print(user)
+                 
             }else {
                 print(response.error?.responseCode ?? "No Error")
             }
