@@ -18,6 +18,7 @@ import Foundation
     //    "created_at":"2021-03-16T03:50:08.242+05:30",
     //    "updated_at":"2021-03-16T22:49:14.936+05:30"
 
+
 struct UserResponse {
     let code: Int
     let data: User
@@ -31,6 +32,5 @@ struct User {
     let status: String
     let created_at: Date
     let updated_at: Date
-    let name2: String
 }
 
