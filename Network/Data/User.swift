@@ -19,18 +19,22 @@ import Foundation
     //    "updated_at":"2021-03-16T22:49:14.936+05:30"
 
 
-struct UserResponse {
-    let code: Int
-    let data: User
+struct UserResponse: Decodable {
+    let code: Int?
+    let meta: Meta?
+    let data: User?
 }
 
-struct User {
-    let id: Int
-    let name: String
-    let email: String
-    let gender: String
-    let status: String
-    let created_at: Date
-    let updated_at: Date
+struct User: Decodable {
+    let id: Int?
+    let name: String?
+    let email: String?
+    let gender: String?
+    let status: String?
+//    let created_at: Date?
+//    let updated_at: Date?
 }
 
+struct Meta: Decodable {
+    
+}

@@ -11,9 +11,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkingProvider.shared
+                
     }
-
+    @IBAction func getUserAction(_ sender: Any) {
+        NetworkingProvider.shared.getUser(id: 257)
+    }
+    
 
 }
 
