@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var idLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +19,7 @@ class ViewController: UIViewController {
         nameLabel.numberOfLines = 0
         emailLabel.text = ""
         emailLabel.numberOfLines = 0
-        
+        idLabel.text = ""
         activityIndicator.hidesWhenStopped = true
         activityIndicator.stopAnimating()
     }
@@ -29,12 +30,15 @@ class ViewController: UIViewController {
             self.activityIndicator.stopAnimating()
             self.nameLabel.text = user.name
             self.emailLabel.text = user.email
+            self.idLabel.text = user.id?.description
             
         } failure: { (error) in
             self.activityIndicator.stopAnimating()
             self.nameLabel.text = error.debugDescription
         }
-
+    }
+    @IBAction func addUserAction(_ sender: Any) {
+        
     }
     
 

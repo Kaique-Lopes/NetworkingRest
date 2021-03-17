@@ -41,22 +41,46 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="WNG-dy-0Jr">
                                 <rect key="frame" x="197" y="438" width="20" height="20"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gd9-bo-wca">
+                                <rect key="frame" x="20" y="293" width="374" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.99845784900000001" green="0.58057886359999999" blue="0.005165772513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRE-3e-0UK">
+                                <rect key="frame" x="20" y="366" width="374" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Post User">
+                                    <color key="titleColor" red="0.99845784900000001" green="0.58057886359999999" blue="0.005165772513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addUserAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jUl-IF-jKL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="w8S-Fn-V34" firstAttribute="top" secondItem="GC0-5d-Slv" secondAttribute="bottom" constant="54" id="2Zh-Ro-i1s"/>
+                            <constraint firstItem="iRE-3e-0UK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2q0-uo-K5y"/>
                             <constraint firstItem="w8S-Fn-V34" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4xT-te-rMj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gd9-bo-wca" secondAttribute="trailing" constant="20" id="4zz-RY-UOg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sz8-AN-bxv" secondAttribute="trailing" constant="114" id="7Hq-FS-e0t"/>
                             <constraint firstItem="GC0-5d-Slv" firstAttribute="trailing" secondItem="w8S-Fn-V34" secondAttribute="trailing" id="84h-TP-aWZ"/>
                             <constraint firstItem="GC0-5d-Slv" firstAttribute="top" secondItem="sz8-AN-bxv" secondAttribute="bottom" constant="29" id="CVw-ge-7IG"/>
+                            <constraint firstItem="iRE-3e-0UK" firstAttribute="top" secondItem="gd9-bo-wca" secondAttribute="bottom" constant="46" id="Fwv-In-A9G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iRE-3e-0UK" secondAttribute="trailing" constant="20" id="GEI-wY-fN4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w8S-Fn-V34" secondAttribute="trailing" constant="20" id="JdI-7N-Oac"/>
+                            <constraint firstItem="WNG-dy-0Jr" firstAttribute="top" secondItem="iRE-3e-0UK" secondAttribute="bottom" constant="33" id="LFR-oh-f27"/>
                             <constraint firstItem="sz8-AN-bxv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="MGf-9E-FWJ"/>
+                            <constraint firstItem="gd9-bo-wca" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MmG-Ex-cGK"/>
+                            <constraint firstItem="gd9-bo-wca" firstAttribute="top" secondItem="w8S-Fn-V34" secondAttribute="bottom" constant="46" id="QKL-BA-kJA"/>
                             <constraint firstItem="GC0-5d-Slv" firstAttribute="top" secondItem="sz8-AN-bxv" secondAttribute="bottom" constant="29" id="Qbf-zp-I8l"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GC0-5d-Slv" secondAttribute="trailing" constant="20" id="RWJ-DY-V4A"/>
                             <constraint firstItem="GC0-5d-Slv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="W7f-cE-p7h"/>
                             <constraint firstItem="w8S-Fn-V34" firstAttribute="top" secondItem="GC0-5d-Slv" secondAttribute="bottom" constant="54" id="YHk-2Q-Yuf"/>
                             <constraint firstItem="WNG-dy-0Jr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bAj-9w-RwN"/>
+                            <constraint firstItem="iRE-3e-0UK" firstAttribute="top" secondItem="gd9-bo-wca" secondAttribute="bottom" constant="46" id="cwb-P9-oO3"/>
                             <constraint firstItem="GC0-5d-Slv" firstAttribute="leading" secondItem="w8S-Fn-V34" secondAttribute="leading" id="eco-zq-AEQ"/>
                             <constraint firstItem="sz8-AN-bxv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="icK-71-n6k"/>
                             <constraint firstItem="GC0-5d-Slv" firstAttribute="centerX" secondItem="WNG-dy-0Jr" secondAttribute="centerX" id="pQv-ej-ntM"/>
@@ -67,6 +91,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="WNG-dy-0Jr" id="Qsp-Qh-WdI"/>
                         <outlet property="emailLabel" destination="w8S-Fn-V34" id="Geo-BI-RLX"/>
+                        <outlet property="idLabel" destination="gd9-bo-wca" id="pWX-9b-LwB"/>
                         <outlet property="nameLabel" destination="GC0-5d-Slv" id="Omh-nx-Dji"/>
                     </connections>
                 </viewController>
