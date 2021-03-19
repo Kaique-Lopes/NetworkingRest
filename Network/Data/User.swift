@@ -35,7 +35,6 @@ struct User: Decodable {
     let createdAt: Date?
     let updatedAt: Date?
     
-    
     enum CodingKeys: String, CodingKey  {
         case id
         case name
@@ -45,7 +44,6 @@ struct User: Decodable {
         case createdAt = "created_at"
         case updatedAt = "updated_at"
     }
-
 }
 
 struct Meta: Decodable {
